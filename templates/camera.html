@@ -1,0 +1,36 @@
+{% include "header.html" %}
+
+<form id="form1" name="form1" method="post" action="/addcam1">
+  <table  border="0" align="center" style="margin-left: 35%">
+    <tr>
+      <td width="145">Serial Number</td>
+      <td><label for="sno"></label>
+      <input type="text" name="sno" id="sno" class="form-control" required /></td>
+    </tr>
+    <tr>
+      <td>Camera Model</td>
+      <td><label for="cm"></label>
+      <input type="text" name="cm" id="cm" class="form-control" required /></td>
+    </tr>
+    <tr>
+      <td>Location</td>
+      <td><label for="loc"></label>
+      <input type="text" name="loc" id="loc" class="form-control" required /></td>
+    </tr>
+    <tr>
+      <td>Latitude</td>
+      <td><label for="lat"></label>
+      <input type="text" name="lat" id="lat" class="form-control" required /></td>
+    </tr>
+    <tr>
+      <td>longitude</td>
+      <td><label for="lon"></label>
+      <input type="text" name="lon" id="lon" class="form-control" required /></td>
+    </tr>
+    <tr>
+
+      <td colspan="2" align="center" height="80"><input type="submit" name="cam" id="cam" value="ADD" class="btn btn-primary btn-rounded" /></td>
+    </tr>
+  </table>
+</form><br><br><br><br><br>
+{% include "footer.html" %}

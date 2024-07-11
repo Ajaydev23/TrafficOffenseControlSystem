@@ -1,0 +1,45 @@
+{% include "tpheader.html" %}
+
+<form id="form1" name="form1" method="post" action="">
+
+  <table width="200" border="0" class="table table-striped">
+      <caption><h3 style="color: orangered" align="center"> Tracked helmet violations </h3></caption>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Date</th>
+      <th scope="col">Time</th>
+      <th scope="col">Vehicle No</th>
+      <th scope="col">Owner name</th>
+        <th scope="col"></th>
+    </tr>
+      {% for i in data %}
+
+      <tr>
+      <td>{{ loop.index }}&nbsp;</td>
+      <td>{{ i['date'] }}&nbsp;</td>
+      <td>{{ i['time'] }}&nbsp;</td>
+      <td>&nbsp;{{ i['vno'] }}</td>
+      <td>{{ i['uname'] }}&nbsp;<br><img src="{{ i['photo'] }}" class="img-rounded" width="100" height="100"/> </td>
+
+
+{#       <td><a href="/addoffence/{{ i['tid'] }}" class="btn btn-rounded btn-primary">Add Offence</a></td>#}
+
+
+
+    </tr>
+      {% endfor %}
+  </table>
+
+</form><br>
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+
+<br>
+<br>
+<br>
+{% include "footer.html" %}
+

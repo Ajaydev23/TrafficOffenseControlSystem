@@ -1,0 +1,41 @@
+{% include "header.html" %}
+
+<form id="form1" name="form1" method="post" action="">
+
+  <table  class="table table-striped" align="center">
+   <caption><center><b style="font-family :'Arial Rounded MT Bold'"><font color="#ff4500">VIEW CAMERA</font></b></center>
+
+   </caption>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Serial Number</th>
+      <th scope="col">Camera Model</th>
+      <th scope="col">Location</th>
+      <th></th>
+    </tr>
+      {% for i in data %}
+    <tr>
+      <td>&nbsp;{{ loop.index }}</td>
+      <td>&nbsp;{{ i['serial_no'] }}</td>
+      <td>&nbsp;{{ i['camera_model'] }}</td>
+      <td>&nbsp;{{ i['location'] }}</td>
+      <td><p><a href="/edit2/{{ i['cid'] }}"  class="btn btn-primary btn-rounded">EDIT</a>
+      <a href="/delete2/{{ i['cid'] }}"  class="btn btn-danger btn-rounded">DELETE</a></p></td>
+    </tr>
+      {% endfor %}
+  </table>
+</form>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br><br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+{% include "footer.html" %}

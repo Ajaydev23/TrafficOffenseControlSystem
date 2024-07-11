@@ -1,0 +1,64 @@
+{% include "header.html" %}
+<div class="card">
+<form action="/add" method="post" enctype="multipart/form-data" name="form1" id="form1">
+
+  <table align="center" style="margin-right: 20%;margin-left: 23%">
+    <tr>
+        <td colspan="2"><center><b style="font-family :'Arial Rounded MT Bold'"><font color="#ff4500">ADD TRAFFIC POLICE</font></b></center></td>
+      </tr>
+    <tr>
+      <th  scope="row" width="154">Traffic Police Name</th>
+      <td ><label for="textfield"></label>
+        <input type="text" name="tpn" id="textfield" class="form-control" required/></td>
+    </tr>
+    <tr>
+      <th scope="row">Gender</th>
+      <td><input type="radio" name="radio" id="radio" value="M" checked />
+      <label for="radio"></label>
+      male
+      <input type="radio" name="radio" id="radio2" value="F" />
+      <label for="radio2"></label>
+      female</td>
+    </tr>
+    <tr>
+      <th scope="row">DateOfBirth</th>
+      <td><label for="textfield2"></label>
+      <input type="date" name="dob" id="textfield2" class="form-control" required /></td>
+    </tr>
+    <tr>
+      <th scope="row">Place</th>
+      <td><label for="textfield3"></label>
+      <input type="text" name="place" id="textfield3" class="form-control" required /></td>
+    </tr>
+    <tr>
+      <th scope="row">Email</th>
+      <td><label for="textfield4"></label>
+      <input type="email" name="email" id="textfield4" class="form-control" required /></td>
+    </tr>
+    <tr>
+      <th scope="row">Post</th>
+      <td><label for="textfield5"></label>
+      <input type="text" name="post" id="textfield5" class="form-control" required /></td>
+    </tr>
+    <tr>
+      <th scope="row">Pin</th>
+      <td><label for="textfield6"></label>
+      <input type="number" name="pin" id="textfield6" class="form-control" required pattern="[0-9]{6}" /></td>
+    </tr>
+    <tr>
+      <th scope="row">Photo</th>
+      <td><label for="fileField"></label>
+      <input type="file" name="photo" id="fileField"  required /></td>
+    </tr>
+    <tr>
+      <th scope="row">Contact Number</th>
+      <td><label for="textfield7"></label>
+      <input type="tel" name="cn" id="textfield7" class="form-control rounded-circle" pattern="[6-0][0-9]{9}" required/></td>
+    </tr>
+    <tr>
+
+      <td align="center" colspan="2" height="69"><input type="submit" name="button" id="button" value="ADD"  class="btn btn-primary btn-rounded" /></td>
+    </tr>
+  </table>
+</form></div>
+{% include "footer.html" %}

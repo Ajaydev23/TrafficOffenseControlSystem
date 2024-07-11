@@ -1,0 +1,62 @@
+{% include "tpheader.html" %}
+<div class="card-body">
+<form action="" method="post" enctype="multipart/form-data" name="form1" id="form1">
+
+  <table style="margin-left: 31%"    align="center">
+    <caption><center><b><font color="#ff4500">PROFILE</font></b></center>
+    </caption>
+    <tr>
+          <td colspan="2" align="center"><center><b>  <IMG src="{{ data["photo"] }}" height="120" width="120" class="img-rounded"></b></center> <br> </td>
+    </tr>
+
+    <tr>
+      <th width="155" scope="row">Traffic Police Name</th>
+      <td >
+        <input type="text" name="tpn" id="textfield" value="{{ data['tpname'] }}" class="form-control" style="background: white" required readonly/>
+   <br>   </td>
+    </tr>
+    <tr>
+      <th scope="row">Gender</th>
+      <td><input type="radio" name="radio" id="radio" value="M"{% if data['gender'] =='M'%}checked{% endif %} />
+      <label for="radio"></label>
+      male
+      <input type="radio" name="radio" id="radio2" value="F" value="male"{% if data['gender'] =='F'%}checked{% endif %}/>
+      <label for="radio2"></label>
+      female</td>
+    </tr>
+    <tr>
+      <th scope="row">DateOfBirth</th>
+      <td><label for="textfield2"></label>
+      <input type="date" name="dob" id="textfield2" value="{{ data['dob'] }}" class="form-control" style="background: white"  required readonly/></td>
+    </tr>
+    <tr>
+      <th scope="row">Place</th>
+      <td><label for="textfield3"></label>
+      <input type="text" name="place" id="textfield3" value="{{ data['place'] }}" class="form-control" style="background: white" required readonly/></td>
+    </tr>
+    <tr>
+      <th scope="row">Email</th>
+      <td><label for="textfield4"></label>
+      <input type="text" name="email" id="textfield4" value="{{ data['email'] }}" class="form-control" style="background: white" required readonly /></td>
+    </tr>
+    <tr>
+      <th scope="row">Post</th>
+      <td><label for="textfield5"></label>
+      <input type="text" name="post" id="textfield5" value="{{ data['post'] }}" class="form-control" style="background: white" required readonly/></td>
+    </tr>
+    <tr>
+      <th scope="row">Pin</th>
+      <td><label for="textfield6"></label>
+      <input type="text" name="pin" id="textfield6"value="{{ data['pin'] }}" class="form-control" style="background: white" required readonly /></td>
+    </tr>
+
+    <tr>
+      <th scope="row">Contact Number</th>
+      <td><label for="textfield7"></label>
+      <input type="text" name="cn" id="textfield7" value="{{ data['contact'] }}" class="form-control" style="background: white" required readonly/></td>
+    </tr>
+
+  </table>
+</form>
+</div>
+{% include "footer.html" %}

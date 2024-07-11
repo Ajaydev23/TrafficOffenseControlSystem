@@ -1,0 +1,46 @@
+{% include "header.html" %}
+
+<form id="form1" name="form1" method="post" action="">
+  <table border="0" class="table table-striped">
+    <tr>
+      <th >#</th>
+      <th >Name</th>
+      <th >Gender</th>
+      <th >DOB</th>
+      <th >Address</th>
+      <th >Email</th>
+      <th >Contact</th>
+      <th >&nbsp;</th>
+    </tr>
+      {% for i in data %}
+    <tr>
+      <td>{{ loop.index }}&nbsp;</td>
+      <td>{{ i['uname'] }}<br>
+          <img src="{{ i['photo'] }}" class="img-rounded"  width="100"/> </td>
+      <td>{{ i['gender'] }}</td>
+      <td>{{ i['dob'] }}</td>
+      <td>{{ i['place'] }}<br>{{ i['post'] }}<br>{{ i['pin'] }}</td>
+      <td>{{ i['email'] }}</td>
+      <td>{{ i['contact'] }}</td>
+{#        <td><a href="/approve_rc1/{{ i['uid'] }}"  class="btn btn-primary btn-rounded">APPROVE</a></td>#}
+    </tr>
+      {% endfor %}
+  </table>
+</form>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+{% include "footer.html" %}

@@ -1,0 +1,45 @@
+{% include "rcheader.html" %}
+
+<form id="form1" name="form1" method="post" action="">
+
+  <table width="200" border="0" class="table table-striped">
+      <caption><h3 style="color: orangered" align="center"> VIEW OFFENCES </h3></caption>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Date</th>
+      <th scope="col">Time</th>
+      <th scope="col">Offence</th>
+      <th scope="col">Vehicle No</th>
+      <th scope="col">Penalty name/desc</th>
+        <th scope="col">Fine</th>
+        <th scope="col"></th>
+    </tr>
+      {% for i in data %}
+    <tr>
+      <td>{{ loop.index }}</td>
+      <td>{{ i['date'] }}</td>
+      <td>{{ i['time'] }}</td>
+      <td>{{ i['offence'] }}</td>
+      <td>&nbsp;{{ i['vno'] }}</td>
+      <td>{{ i['penaltyname'] }}<br>{{ i['descr'] }}</td>
+      <td>{{ i['fine'] }}</td>
+        {% if i['status']=='tracked' %}
+    <td><a href="/payment/{{ i['tid'] }}/{{ i['fine'] }}" class="btn btn-rounded btn-primary">PAY FINE</a> </td>
+    {% else %}
+            <td><font color="green"><b>PAID</b></font></td>
+    {% endif %}
+    </tr>
+      {% endfor %}
+  </table>
+</form><br>
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+<br>
+<br>
+<br>
+{% include "footer.html" %}
+

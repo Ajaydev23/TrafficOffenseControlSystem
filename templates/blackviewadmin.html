@@ -1,0 +1,39 @@
+{% include "header.html" %}
+
+<form id="form1" name="form1" method="post" action="">
+  <table align="center" border="0" class="table table-striped" >
+    <tr>
+        <th  scope="col"  align="center"><b>#</b></th>
+        <th  scope="col" >Date</th>
+        <th scope="col">Owner name</th>
+        <th scope="col" >VehicleNo</th>
+        <th  scope="col" >VehicleName</th>
+    </tr>
+      {% for i in data %}
+    <tr>
+        <td align="center">{{ loop.index }}&nbsp;</td>
+        <td>&nbsp;{{ i['date'] }}</td>
+        <td><a href="/viewrcdata1/{{ i['uid'] }}" class="btn btn-outline-danger" style="background: #e8f2ff"><font color="#ff1493"> {{ i['uname'] }} </font></a>
+        <br><img src="{{ i['photo'] }}" class="img-rounded" width="100" height="100"/></td>
+        <td>&nbsp;{{ i['vno'] }}</td>
+        <td>&nbsp;{{ i['vhname'] }}</td>
+    </tr>
+      {% endfor %}
+  </table>
+</form>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br><br>
+<br>
+<br>
+{% include "footer.html" %}

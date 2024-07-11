@@ -1,0 +1,148 @@
+{#<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">#}
+{#<html xmlns="http://www.w3.org/1999/xhtml" xmlns="http://www.w3.org/1999/html">#}
+{#<head>#}
+{#<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />#}
+{#<title>Untitled Document</title>#}
+{#</head>#}
+{##}
+{#<body bgcolor="black">#}
+{#<form id="form1" name="form1" action="/click" method="post">#}
+{#    <br>#}
+{#    <br>#}
+{#    <br>#}
+{#    <br>#}
+{#  <table width="600" height="400" bgcolor="#f0f8ff" align="center">#}
+{#      <tr>#}
+{#          <td colspan="2"bgcolor="aqua"><center><font size="4"<b>login</b></font></center>#}
+{##}
+{#          </td>#}
+{#      </tr>#}
+{#    <tr>#}
+{#      <td>Username</td>#}
+{#      <td><label for="textfield"></label>#}
+{#      <input type="text" name="textfield" id="textfield" /></td>#}
+{#    </tr>#}
+{#    <tr>#}
+{#      <td>Password</td>#}
+{#      <td><label for="textfield2"></label>#}
+{#      <input type="password" name="textfield2" id="textfield2" /></td>#}
+{#    </tr>#}
+{#    <tr>#}
+{#      <td colspan="2"><div align="center">#}
+{#        <input style="font-style: oblique;font-size: large;" type="submit" name="button" id="button" value="login" />#}
+{##}
+{#      </div></td>#}
+{#    </tr>#}
+{#  </table>#}
+{#</form>#}
+{#</body>#}
+{#</html>#}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Login V19</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->
+	<link rel="icon" type="image/png" href="../static/imagesl/icons/favicon.ico"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="../static/vendorl/bootstrap/css/bootstrap.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="../static/fontsl/font-awesome-4.7.0/css/font-awesome.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="../static/fontsl/Linearicons-Free-v1.0.0/icon-font.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="../static/vendorl/animate/animate.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="../static/vendorl/css-hamburgers/hamburgers.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="../static/vendorl/animsition/css/animsition.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="../static/vendorl/select2/select2.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="../static/vendorl/daterangepicker/daterangepicker.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="../static/cssl/util.css">
+	<link rel="stylesheet" type="text/css" href="../static/cssl/main.css">
+<!--===============================================================================================-->
+</head>
+<body>
+<form id="form1" name="form1" method="post" action="/click">
+	<div class="limiter">
+		<div class="container" align="center" style="width: 100%;  min-height: 100vh;  display: -webkit-box;  display: -webkit-flex;  display: -moz-box; display: -ms-flexbox;  display: flex;  flex-wrap: wrap;  justify-content: center;  align-items: center;  padding: 15px;">
+			<div class="wrap-login100 p-l-55 p-r-55 p-t-65 p-b-50">
+				<form class="login100-form validate-form">
+					<span class="login100-form-title p-b-33" style="background-image: url(/static/imagesl/p.jpg)">
+                        <br><font color="blue"><b> Account Login</b></font><br>
+					</span>
+<br>
+					<div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
+						<input class="input100" type="text" name="textfield" placeholder="Email">
+						<span class="focus-input100-1"></span>
+						<span class="focus-input100-2"></span>
+					</div>
+
+					<div class="wrap-input100 rs1 validate-input" data-validate="Password is required">
+						<input class="input100" type="password" name="textfield2" placeholder="Password">
+						<span class="focus-input100-1"></span>
+						<span class="focus-input100-2"></span>
+					</div>
+<br>
+					<div class="container-login100-form-btn m-t-20">
+						<button class="login100-form-btn">
+							Sign in
+						</button>
+					</div>
+
+					<div class="text-center p-t-45 p-b-4">
+						<span class="txt1">
+							Forgot
+						</span>
+
+						<a href="/forget_pswd" class="txt2 hov1">
+							 Password?
+						</a>
+					</div>
+{##}
+					<div class="text-center">
+						<span class="txt1">
+							Create an account?
+						</span>
+
+						<a href="/reg" class="txt2 hov1">
+							Sign up
+						</a>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+
+
+
+<!--===============================================================================================-->
+	<script src="../static/vendorl/jquery/jquery-3.2.1.min.js"></script>
+<!--===============================================================================================-->
+	<script src="../static/vendorl/animsition/js/animsition.min.js"></script>
+<!--===============================================================================================-->
+	<script src="../static/vendorl/bootstrap/js/popper.js"></script>
+	<script src="../static/vendorl/bootstrap/js/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+	<script src="../static/vendorl/select2/select2.min.js"></script>
+<!--===============================================================================================-->
+	<script src="../static/vendorl/daterangepicker/moment.min.js"></script>
+	<script src="../static/vendorl/daterangepicker/daterangepicker.js"></script>
+<!--===============================================================================================-->
+	<script src="../static/vendorl/countdowntime/countdowntime.js"></script>
+<!--===============================================================================================-->
+	<script src="../static/jsl/main.js"></script>
+</form>
+</body>
+</html>
+<script type="text/javascript" src="/static/vendorl/jquery/jquery.backstretch.min.js"></script>
+  <script>
+    $.backstretch("/static/100.jpg", {
+      speed: 500
+    });
+  </script>

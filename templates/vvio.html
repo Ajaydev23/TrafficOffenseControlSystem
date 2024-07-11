@@ -1,0 +1,39 @@
+{% include "header.html" %}
+
+<form id="form1" name="form1" method="post" action="">
+  <table width="200" border="0" class="table table-striped">
+    <tr>
+      <th scope="col">#</th>
+{#      <th scope="col">Camid</th>#}
+      <th scope="col">Date</th>
+      <th scope="col">Time</th>
+      <th scope="col">VehicleNo</th>
+      <th scope="col">offences</th>
+      <th scope="col">Vname</th>
+        <th scope="col">final fine</th>
+    </tr>
+      {% for i in data %}
+      <tr>
+      <td>{{ loop.index }}&nbsp;</td>
+{#      <td>{{ i['camid'] }}&nbsp;</td>#}
+      <td>{{ i['date'] }}&nbsp;</td>
+      <td>{{ i['time'] }}&nbsp;</td>
+      <td>&nbsp;{{ i['vno'] }}</td>
+      <td>&nbsp;{{ i['offence'] }}</td>
+      <td>{{ i['vhname'] }}&nbsp;</td>
+       <td>{{ i['final_fine'] }}&nbsp;</td>
+    </tr>
+      {% endfor %}
+  </table>
+</form><br>
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+<br>
+<br>
+<br>
+{% include "footer.html" %}
+

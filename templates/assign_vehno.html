@@ -1,0 +1,23 @@
+{% include "header.html" %}
+<form id="form1" name="form1" method="post" action="/addv11/{{ vid }}">
+  <table style="margin-left: 28%" border="0" align="center">
+      <caption ><font color="red" ><center>ASSIGN VEHICLE NUMBER</center></font> </caption>
+    <tr>
+      <th scope="row" width="146">Vehicle number</th>
+      <td><label for="com"></label>
+        <input type="text" name="vnum" id="vnum" class="form-control " placeholder="KL X2 3454" style="background: black; color: white ; height: 55px ;width: 200px"  required/></td>
+    </tr>
+    <tr align="center">
+      <td colspan="2" height="80" align="center" >
+          <input type="submit" name="sub" id="sub" value="Assign vehicle number"  class="btn btn-primary btn-rounded" /></td>
+    </tr>
+  </table>
+</form>
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+{% include "footer.html" %}
+

@@ -1,0 +1,38 @@
+{% include "rcheader.html" %}
+
+<form id="form1" name="form1" method="post" action="" xmlns="http://www.w3.org/1999/html">
+
+  <table width="200" border="0" class="table table-striped">
+      <caption><h3 style="color: blue" align="center"> NOTIFICATIONS </h3>
+  <br>
+          <b><font color="black"><h4 align="center">Your Vehicle is spotted for breaking traffic rules...</h4><br></font><h5 align="center"><font color="#ff4500"> Not wearing helmet </font><font color="black">while driving is a traffic offence!!!</font></h5></b>
+</caption>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Date</th>
+      <th scope="col">Time</th>
+      <th scope="col">Vehicle No</th>
+        <th>Fine status</th>
+     </tr>
+      {% for i in data %}
+    <tr>
+      <td>{{ loop.index }}</td>
+        <td><font color="#ff4500">{{ i['date'] }}</font></td>
+        <td><font color="orange">{{ i['time'] }}</font></td>
+      <td>{{ i['vno'] }}</td>
+      <td>{{ i['status'] }}</td>
+    </tr>
+      {% endfor %}
+  </table>
+</form><br>
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+<br>
+<br>
+<br>
+{% include "footer.html" %}
+

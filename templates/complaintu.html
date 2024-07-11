@@ -1,0 +1,19 @@
+{% include "rcheader.html" %}
+<form id="form1" name="form1" method="post" action="/tcom">
+  <table style="margin-left: 28%" border="0" align="center">
+      <caption ><font color="red" ><center>POST COMPLAINTS</center></font> </caption>
+    <tr>
+      <th scope="row" width="146">Complaint</th>
+      <td><label for="com"></label>
+      <textarea name="com" id="com" cols="45" rows="5" class="form-control" required></textarea></td>
+    </tr>
+    <tr>
+      <td colspan="2" height="80" align="center" scope="row"><input type="submit" name="sub" id="sub" value="Submit"  class="btn btn-primary btn-rounded" /></td>
+    </tr>
+  </table>
+</form>
+<br><br>
+<br><br>
+<br><br>
+{% include "footer.html" %}
+

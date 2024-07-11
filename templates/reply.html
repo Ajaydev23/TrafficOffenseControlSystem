@@ -1,0 +1,21 @@
+{% include "tpheader.html" %}
+<form id="form1" name="form1" method="post" action="/sreply">
+  <table  border="0" align="center" style="margin-left: 29%">
+      <input type="hidden" name="cid" value="{{ data }}">
+    <tr>
+      <th scope="row" width="145">Reply</th>
+      <td><label for="com"></label>
+      <textarea name="reply" id="com" cols="45" rows="5" class="form-control" required></textarea></td>
+    </tr>
+    <tr>
+      <td align="center" colspan="2" scope="row" height="80"><input type="submit" name="sub" id="sub" value="Submit"  class="btn btn-primary btn-rounded" /></td>
+    </tr>
+  </table>
+</form>
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+{% include "footer.html" %}

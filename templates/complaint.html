@@ -1,0 +1,32 @@
+{% include "tpheader.html" %}
+
+<form id="form1" name="form1" method="post" action="">
+  <table width="200" border="0" class="table table-striped">
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">User name</th>
+      <th scope="col">Complaint</th>
+      <th scope="col">Date</th>
+
+      <th scope="col">&nbsp;</th>
+    </tr>
+      {% for i in data %}
+
+    <tr>
+      <td>{{ loop.index  }}</td>
+      <td>{{ i['uname'] }}<br><img src="{{ i['photo'] }}" class="img-rounded" width="100" height="100"/></td>
+      <td>{{i['complaint'] }}</td>
+      <td>&nbsp;{{ i['date'] }}</td>
+
+      <td><a href="/reply/{{ i['cid'] }}"  class="btn btn-primary btn-rounded">reply</a></td>
+    </tr>
+      {% endfor %}
+  </table>
+</form>
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+{% include "footer.html" %}

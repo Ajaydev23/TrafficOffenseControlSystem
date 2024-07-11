@@ -1,0 +1,43 @@
+{% include "tpheader.html" %}
+
+<form id="form1" name="form1" method="post" action="">
+  <table width="200" border="0" class="table table-striped">
+    <tr>
+      <th scope="col">#</th>
+{#      <th scope="col">Camid</th>#}
+      <th scope="col">Date</th>
+      <th scope="col">Time</th>
+      <th scope="col">camera model</th>
+      <th scope="col">Camera location</th>
+      <th scope="col">Captured Pic</th>
+      <th scope="col"></th>
+{#      <th scope="col"></th>#}
+    </tr>
+      {% for i in data %}
+      <tr>
+      <td>{{ loop.index }}&nbsp;</td>
+{#      <td>{{ i['camid'] }}&nbsp;</td>#}
+      <td>{{ i['date'] }}&nbsp;</td>
+      <td>{{ i['time'] }}&nbsp;</td>
+      <td>&nbsp;{{ i['camera_model'] }}</td>
+      <td>&nbsp;{{ i['location'] }}</td>
+      <td><img src="{{ i['photo'] }}" height="150" width="150"/></td>
+
+             <td><a href="/trackvio/{{ i['hid'] }}" class="btn btn-rounded btn-danger">Verify</a></td>
+
+
+    </tr>
+                {% endfor %}
+  </table>
+</form><br>
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+<br>
+<br>
+<br>
+{% include "footer.html" %}
+

@@ -1,0 +1,67 @@
+{% include "rcheader.html" %}
+
+<form action="/updaterc/{{ data['uid'] }}" method="post" enctype="multipart/form-data" name="form1" id="form1">
+
+  <table width="600" height="400" align="center" style="margin-left: 29%">
+   <caption><center><b style="font-family :'Arial Rounded MT Bold'"><font color="#ff4500">EDIT PROFILE</font></b></center>
+
+   </caption>
+
+    <tr>
+      <th scope="row">Name</th>
+      <td><label for="textfield"></label>
+      <input type="text" name="name" id="name" value="{{ data['uname'] }}" class="form-control" required/></td>
+    </tr>
+    <tr>
+      <th scope="row">Gender</th>
+      <td><input type="radio" name="radio" id="radio" value="male"{% if data['gender'] =='male'%}checked{% endif %} />
+      <label for="radio"></label>
+      male
+      <input type="radio" name="radio" id="radio2" value="female" value="male"{% if data['gender'] =='female'%}checked{% endif %}/>
+      <label for="radio2"></label>
+      female</td>
+    </tr>
+    <tr>
+      <th scope="row">Date Of Birth</th>
+      <td><label for="textfield2"></label>
+      <input type="date" name="dob" id="dob" value="{{ data['dob'] }}" class="form-control" required/></td>
+    </tr>
+    <tr>
+      <th scope="row">Place</th>
+      <td><label for="textarea"></label>
+        <label for="textfield6"></label>
+      <input type="text" name="place" id="place" value="{{ data['place'] }}" class="form-control" required/></td>
+    </tr>
+    <tr>
+      <th scope="row">Post</th>
+      <td><label for="textfield3"></label>
+      <input type="text" name="post" id="post" value="{{ data['post'] }}" class="form-control" required/></td>
+    </tr>
+    <tr>
+      <th scope="row">Pin</th>
+      <td><label for="textfield4"></label>
+      <input type="number" name="pin" id="pin" value="{{ data['pin'] }}"  pattern="[0-9]{6}"  class="form-control" required/></td>
+    </tr>
+    <tr>
+      <th scope="row">Email</th>
+      <td><label for="textfield9"></label>
+      <input type="text" name="email" id="email" value="{{ data['email'] }}" class="form-control" readonly required /></td>
+    </tr>
+    <tr>
+      <th scope="row">Photo</th>
+      <td><label for="textfield7"></label>
+        <label for="fileField"></label>
+      <input type="file" name="photo" id="photo" value="{{ data['photo'] }}"/></td>
+    </tr>
+    <tr>
+      <th scope="row">contact</th>
+      <td><label for="textfield5"></label>
+      <input type="text" name="contact" id="contact" value="{{ data['contact'] }}" class="form-control"  pattern="[6-0][0-9]{9}"  required/>
+      <label for="textfield8"></label></td>
+    </tr>
+    <tr>
+      <td colspan="2" align="center" scope="row"><input type="submit" name="button" id="button" value="EDIT" class="btn btn-primary btn-rounded" /></td>
+    </tr>
+  </table>
+</form>
+{% include "footer.html" %}

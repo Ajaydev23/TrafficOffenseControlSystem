@@ -1,0 +1,49 @@
+{% include "header.html" %}
+
+<form id="form1" name="form1" method="post" action="">
+
+  <table width="200" border="0" class="table table-striped">
+      <caption><h3 style="color: orangered" align="center"> VIEW OFFENCES </h3></caption>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Date</th>
+      <th scope="col">Time</th>
+      <th scope="col">Offence</th>
+      <th scope="col">Vehicle No</th>
+      <th scope="col">Owner name</th>
+        <th scope="col">Penalty name/desc</th>
+        <th scope="col">Fine</th>
+        <th scope="col"></th>
+    </tr>
+      {% for i in data %}
+    <tr>
+      <td>{{ loop.index }}</td>
+      <td>{{ i['date'] }}</td>
+      <td>{{ i['time'] }}</td>
+      <td>{{ i['offence'] }}</td>
+      <td>&nbsp;{{ i['vno'] }}</td>
+        <td><a href="/viewrcdata1/{{ i['uid'] }}" class="btn btn-outline-danger" style="background: #e8f2ff"><font color="#ff1493"> {{ i['uname'] }} </font></a>
+            <br><img src="{{ i['photo'] }}" class="img-rounded" width="100" height="100"/></td>
+      <td>{{ i['penaltyname'] }}<br>{{ i['descr'] }}</td>
+      <td>{{ i['fine'] }}</td>
+        {% if i['status']=='paid'  %}
+        <td><font color="blue"><b>PAID</b></font></td>
+        {% else %}
+        <td><font color="red"><b>Tracked</b></font></td>
+        {% endif %}
+
+    </tr>
+      {% endfor %}
+  </table>
+</form><br>
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+<br>
+<br>
+<br>
+{% include "footer.html" %}
+

@@ -1,0 +1,52 @@
+{% include "rcheader.html" %}
+
+<form id="form1" name="form1" method="post" action="/addv1">
+
+  <table style="margin-left: 29%"  align="center">
+       <tr>
+           <td colspan="2" align="center"><b style="font-family :'Arial Rounded MT Bold'"><font color="#ff4500">ADD VEHICLE</font></b></center>
+
+          </td>
+      </tr>
+{#    <tr>#}
+{#      <th scope="row" width="145">Vehicle Number</th>#}
+{#      <td><label for="textfield"></label>#}
+{#      <input type="text" name="vnum" id="vnum" class="form-control" required/></td>#}
+{#    </tr>#}
+    <tr>
+      <th scope="row">Ch No</th>
+      <td><label for="textfield2"></label>
+      <input type="text" name="chnum" id="chnum" class="form-control" required /></td>
+    </tr>
+    <tr>
+      <th scope="row">VehicleName</th>
+      <td><label for="textfield3"></label>
+      <input type="text" name="vname" id="vname" class="form-control" required /></td>
+    </tr>
+    <tr>
+      <th scope="row">AadharNumber</th>
+      <td><label for="textfield4"></label>
+      <input type="text" name="adnum" id="adnum" class="form-control" required /></td>
+    </tr>
+    <tr>
+      <th scope="row">ManufactureDate</th>
+      <td><label for="textfield5"></label>
+      <input type="date" name="mand" id="mand" class="form-control" required /></td>
+    </tr>
+    <tr>
+      <th scope="row">Company</th>
+      <td><label for="textarea"></label>
+      <input name="company" id="company" type="text" class="form-control" required/></td>
+    </tr>
+    <tr>
+      <th scope="row">TypeOfVehicle</th>
+      <td><label for="textarea2"></label>
+      <input name="tov" id="tov" type="text"  class="form-control" required/></td>
+    </tr>
+    <tr>
+      <td align="center" colspan="2" height="50" scope="row"><input type="submit" name="button" id="button" value="ADD VEHICLE"  class="btn btn-primary btn-rounded" /></td>
+    </tr>
+  </table>
+</form><br>
+{% include "footer.html" %}
+

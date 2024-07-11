@@ -1,0 +1,30 @@
+{% include "header.html" %}
+<form id="form1" name="form1" method="post" action="/addp">
+  <table style="margin-left: 29%" border="0" align="center">
+    <caption><font color="red"><center>ADD PENALTY</center></font> </caption>
+      <tr>
+      <td width="145">Penalty Name</td>
+      <td><label for="pname"></label>
+      <input type="text" name="pname" id="pname" class="form-control" required/></td>
+    </tr>
+    <tr>
+      <td>Description</td>
+      <td><label for="des"></label>
+      <input type="text" name="des" id="des" class="form-control" required /></td>
+    </tr>
+    <tr>
+      <td>Fine</td>
+      <td><label for="fine"></label>
+      <input type="number" name="fine" id="fine" class="form-control" required/></td>
+    </tr>
+    <tr>
+      <td colspan="2" height="80"><div align="center">
+        <input type="submit" name="add" id="add" value="ADD"  class="btn btn-primary btn-rounded" />
+      </div></td>
+    </tr>
+  </table>
+</form>
+<br><br>
+<br><br>
+<br>
+{% include "footer.html" %}

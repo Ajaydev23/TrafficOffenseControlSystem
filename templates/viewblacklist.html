@@ -1,0 +1,46 @@
+{% include "rcheader.html" %}
+
+<form id="form1" name="form1" method="post" action="">
+  <table align="center" border="0" class="table table-striped">
+    <tr>
+{#        <th></th>#}
+      <th  scope="col">#</th>
+      <th  scope="col">Black listed Date</th>
+      <th scope="col">VehicleNo</th>
+      <th  scope="col">VehicleName</th>
+      <th  scope="col"></th>
+    </tr>
+      {% for i2 in i %}
+           <tr>
+{#           <td></td>#}
+      <td>{{ loop.index }}&nbsp;</td>
+      <td>&nbsp;{{ i2['date'] }}</td>
+      <td>&nbsp;{{ i2['vno'] }}</td>
+      <td>&nbsp;{{ i2['vhname'] }}</td>
+{#      <td>&nbsp;{{ i2['date'] }}</td>#}
+    </tr>
+
+      {% endfor %}
+
+
+
+  </table>
+</form>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+{% include "footer.html" %}

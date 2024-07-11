@@ -1,0 +1,42 @@
+{% include "rcheader.html" %}
+
+<form id="form1" name="form1" method="post" action="">
+  <table align="center" border="0" class="table table-striped">
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">v.num</th>
+      <th scope="col">ch.num</th>
+      <th scope="col">Vehicle Name</th>
+      <th scope="col">Aadhar No</th>
+      <th scope="col">manu_date</th>
+      <th scope="col">company</th>
+      <th scope="col">Type of Vehicle</th>
+        <th></th>
+    </tr>
+      {% for i in data %}
+    <tr>
+      <td>{{ loop.index }}&nbsp;</td>
+        {% if i['vno'] =='0' %}
+            <td><font color="red">Not Assigned yet</font></td>
+        {% else %}
+            <td><font color="green"><b>{{ i['vno'] }}</b></font></td>
+        {% endif %}
+      <td>{{ i['chno'] }}</td>
+      <td>{{ i['vhname'] }}</td>
+      <td>{{ i['adharno'] }}&nbsp;</td>
+      <td>{{ i['manu_date'] }}&nbsp;</td>
+      <td>{{ i['company'] }}</td>
+      <td>{{ i['tov'] }}&nbsp;</td>
+{#     {% if i['vno'] =='0' %}#}
+{#    <td></td>#}
+{#      {% else %}#}
+{#     <td><p><a href="/edit3/{{ i['vid'] }}" class="btn btn-rounded btn-primary">EDIT</a>#}
+{#         <a href="/delete3/{{ i['vid'] }}" class="btn btn-rounded btn-danger">DELETE</a></p></td>#}
+{#    {% endif %}#}
+    </tr>
+       {% endfor %}
+  </table>
+</form>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+{% include "footer.html" %}
+

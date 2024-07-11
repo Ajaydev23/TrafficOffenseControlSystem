@@ -1,0 +1,37 @@
+{% include "rcheader.html" %}
+<form id="form1" name="form1" method="post" action="">
+  <table border="0" class="table table-striped">
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Date</th>
+      <th scope="col">Complaint</th>
+      <th scope="col">Reply</th>
+      <th scope="col">ReplyDate</th>
+      <th scope="col">&nbsp;</th>
+    </tr>
+      {% for i in data %}
+
+    <tr>
+      <td>{{ loop.index  }}</td>
+      <td>{{i['date'] }}</td>
+      <td>&nbsp;{{ i['complaint'] }}</td>
+        {% if i['reply']=='pending' %}
+            <td><font color="red">Pending</font></td>
+            <td><font color="red">Pending</font></td>
+        {% else %}
+      <td>{{  i['reply']}}&nbsp;</td>
+      <td>&nbsp;{{ i['reply_date'] }}</td>
+    {% endif %}
+    </tr>
+      {% endfor %}
+  </table>
+</form>
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+{% include "footer.html" %}

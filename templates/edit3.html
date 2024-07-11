@@ -1,0 +1,51 @@
+{% include "rcheader.html" %}
+
+<form id="form1" name="form1" method="post" action="/addv1">
+
+  <table style="margin-left: 29%" align="center" method="post" action="/update3">
+       <tr>
+           <td colspan="2"><center><b style="font-family :'Arial Rounded MT Bold'"><font color="#ff4500">VEHICLE</font></b></center>
+
+          </td>
+      </tr>
+    <tr>
+      <th scope="row">Vehicle Number</th>
+      <td><label for="textfield"></label>
+      <input type="text" name="vnum" id="vnum" value="{{ data['vno'] }}" class="form-control" readonly required/></td>
+    </tr>
+    <tr>
+      <th scope="row">ChNo</th>
+      <td><label for="textfield2"></label>
+      <input type="text" name="chnum" id="chnum" value="{{ data['chno'] }}" class="form-control" required /></td>
+    </tr>
+    <tr>
+      <th scope="row">Vehicle Name</th>
+      <td><label for="textfield3"></label>
+      <input type="text" name="vname" id="vname" value="{{ data['vhname'] }}" class="form-control" required/></td>
+    </tr>
+    <tr>
+      <th scope="row">Aadhar Number</th>
+      <td><label for="textfield4"></label>
+      <input type="number" name="adnum" id="adnum" value="{{ data['adharno'] }}" class="form-control" required /></td>
+    </tr>
+    <tr>
+      <th scope="row">Manufacture  Date</th>
+      <td><label for="textfield5"></label>
+      <input type="date" name="mand" id="mand" value="{{ data['manu_date'] }}" class="form-control" required/></td>
+    </tr>
+    <tr>
+      <th scope="row">Company</th>
+      <td><label for="textarea"></label>
+      <input name="company" id="company" cols="45" rows="5" value="{{ data['company'] }}" class="form-control" required/></td>
+    </tr>
+    <tr>
+      <th scope="row">Type Of Vehicle</th>
+      <td><label for="textarea2"></label>
+      <input name="tov" id="tov" cols="45" rows="5" value="{{ data['tov'] }}" class="form-control" required/></td>
+    </tr>
+    <tr>
+      <td align="center" colspan="2" scope="row" height="50"><input type="submit" name="button" id="button" value="update"  class="btn btn-primary btn-rounded" /></td>
+    </tr>
+  </table>
+</form>
+{% include "footer.html" %}
